@@ -11,20 +11,20 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class GetAlbunesCompl implements Task {
 
-    private final int page;
+    private final String id;
 
-    public GetAlbunesCompl(int page) {
-        this.page = page;
+    public GetAlbunesCompl(String id) {
+        this.id = id;
     }
 
-    public static Performable fromPage(int page) {
-        return instrumented(GetAlbunesCompl.class, page);
+    public static Performable fromPage(String id) {
+        return instrumented(GetAlbunesCompl.class, id);
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Get.resource("/api/unknown")
+                Get.resource("/api/unknown"+id)
 
                         .with(requestSpecification
                                 -> requestSpecification.contentType(ContentType.JSON)

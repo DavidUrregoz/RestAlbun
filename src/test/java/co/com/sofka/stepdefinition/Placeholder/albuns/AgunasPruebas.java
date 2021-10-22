@@ -27,7 +27,7 @@ public class AgunasPruebas {
                 .whoCan(CallAnApi.at(restApiUrl));
 
         david.attemptsTo(
-                GetAlbunesCompl.fromPage(1)
+                GetAlbunesCompl.fromPage("?id=2")
         );
 
         david.should(

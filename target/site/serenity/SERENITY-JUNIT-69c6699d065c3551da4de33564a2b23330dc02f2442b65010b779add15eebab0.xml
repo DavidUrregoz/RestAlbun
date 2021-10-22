@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="co.com.sofka.stepdefinition.Placeholder.albuns.AgunasPruebas" skipped="0" tests="1" time="3.51" timestamp="2021-10-22 03:48:33"><testcase classname="co.com.sofka.stepdefinition.Placeholder.albuns.AgunasPruebas" name="El usuario"><error message="Cannot deserialize value of type `java.util.ArrayList&lt;co.com.sofka.models.Datum&gt;` from Object value (token `JsonToken.START_OBJECT`)&#10; at [Source: (String)&quot;{&quot;data&quot;:{&quot;id&quot;:2,&quot;name&quot;:&quot;fuchsia rose&quot;,&quot;year&quot;:2001,&quot;color&quot;:&quot;#C74375&quot;,&quot;pantone_value&quot;:&quot;17-2031&quot;},&quot;support&quot;:{&quot;url&quot;:&quot;https://reqres.in/#support-heading&quot;,&quot;text&quot;:&quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;}}&quot;; line: 1, column: 9] (through reference chain: co.com.sofka.models.Users[&quot;data&quot;])" type="com.fasterxml.jackson.databind.exc.MismatchedInputException">Cannot deserialize value of type `java.util.ArrayList&lt;co.com.sofka.models.Datum&gt;` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (String)"{"data":{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}"; line: 1, column: 9] (through reference chain: co.com.sofka.models.Users["data"])</error><system-err>Cannot deserialize value of type `java.util.ArrayList&lt;co.com.sofka.models.Datum&gt;` from Object value (token `JsonToken.START_OBJECT`)
+ at [Source: (String)"{"data":{"id":2,"name":"fuchsia rose","year":2001,"color":"#C74375","pantone_value":"17-2031"},"support":{"url":"https://reqres.in/#support-heading","text":"To keep ReqRes free, contributions towards server costs are appreciated!"}}"; line: 1, column: 9] (through reference chain: co.com.sofka.models.Users["data"])&#13;
+com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:59)&#13;
+com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1741)&#13;
+com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1515)&#13;
+com.fasterxml.jackson.databind.DeserializationContext.handleUnexpectedToken(DeserializationContext.java:1462)&#13;
+com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.handleNonArray(CollectionDeserializer.java:392)&#13;
+com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:252)&#13;
+com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)&#13;
+com.fasterxml.jackson.databind.deser.impl.MethodProperty.deserializeAndSet(MethodProperty.java:129)&#13;
+com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:313)&#13;
+com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:176)&#13;
+com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:322)&#13;
+com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4675)&#13;
+com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3630)&#13;
+io.restassured.internal.path.json.mapping.JsonPathJackson2ObjectDeserializer.deserialize(JsonPathJackson2ObjectDeserializer.groovy:47)&#13;
+io.restassured.internal.mapping.Jackson2Mapper.deserialize(Jackson2Mapper.groovy:58)&#13;
+io.restassured.internal.mapping.ObjectMapping.parseWithJackson2(ObjectMapping.groovy:204)&#13;
+io.restassured.internal.mapping.ObjectMapping.deserialize(ObjectMapping.groovy:57)&#13;
+io.restassured.internal.RestAssuredResponseOptionsGroovyImpl.as(RestAssuredResponseOptionsGroovyImpl.groovy:220)&#13;
+io.restassured.internal.RestAssuredResponseOptionsImpl.as(RestAssuredResponseOptionsImpl.java:166)&#13;
+net.serenitybdd.rest.decorators.ResponseDecorated.as(ResponseDecorated.java:63)&#13;
+co.com.sofka.questions.GetAlbunByIdUser.answeredBy(GetAlbunByIdUser.java:13)&#13;
+co.com.sofka.stepdefinition.Placeholder.albuns.AgunasPruebas.elUsuario(AgunasPruebas.java:40)&#13;
+</system-err></testcase></testsuite>

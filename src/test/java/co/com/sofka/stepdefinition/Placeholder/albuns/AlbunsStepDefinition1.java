@@ -6,17 +6,16 @@ import co.com.sofka.tasks.albuns.GetAlbunesCompl;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.cucumber.CucumberWithSerenity;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
-import org.junit.runner.RunWith;
+
 
 import static co.com.sofka.questions.GetAlbunByIdUser.getAlbunByIdUser;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
-//@RunWith(CucumberWithSerenity.class)
 public class AlbunsStepDefinition1  {
 
     private static final String restApiUrl="https://reqres.in";
@@ -29,7 +28,7 @@ public class AlbunsStepDefinition1  {
                 .whoCan(CallAnApi.at(restApiUrl));
 
         david.attemptsTo(
-                GetAlbunesCompl.fromPage(1)
+                GetAlbunesCompl.fromPage("")
         );
         david.should(
                 seeThat("El codigo de respuesta ", ResponseCode.was(),equalTo(200))
@@ -73,12 +72,19 @@ public class AlbunsStepDefinition1  {
     //FALLIDO
     @When("cuando el usuario realice mal la peticion")
     public void cuando_el_usuario_realice_mal_la_peticion() {
-
+        Actor david = Actor.named("David the actor")
+                .whoCan(CallAnApi.at(restApiUrl));
+        david.attemptsTo(
+                GetAlbunesCompl.fromPage("?id=18")//Formato no existente
+        );
     }
 
     @Then("el servicio debew retornar un mensaje de error 404Not Found")
     public void el_servicio_debew_retornar_un_mensaje_de_error_404Not_Found() {
+        david.should(
+                seeThat("El codigo de respuesta ", ResponseCode.was(),equalTo(404))
 
+        );
     }
 
 
