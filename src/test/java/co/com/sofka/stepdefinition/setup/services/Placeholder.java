@@ -7,7 +7,7 @@ import static co.com.sofka.util.Log4jValues.LOG4J_PROPERTIES_FILE_PATH;
 public class Placeholder {
     private static final String BASE_URI = "https://jsonplaceholder.typicode.com";
     //private static final String BASE_PATH = "/api";
-    protected static final String RESOURCE = "/albums";
+    //protected static final String RESOURCE = "/albums";
 
     protected void generalSetUp(){
         setUpLog4j2();

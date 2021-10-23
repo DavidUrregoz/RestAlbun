@@ -24,7 +24,7 @@ public class GetAlbunesCompl implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Get.resource("/api/unknown"+id)
+                Get.resource("/albums"+id)
 
                         .with(requestSpecification
                                 -> requestSpecification.contentType(ContentType.JSON)

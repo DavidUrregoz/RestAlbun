@@ -8,9 +8,9 @@ Feature: Albun de fotos
     Given el usuario está en la pagina y
 
   Scenario: get exitoso
-    When cuando el usuario quiere ver especificamente el albun "1" el Usuario  "1"
+    When cuando el usuario quiere ver especificamente el algun albun
     Then el usuario deberá ver el titulo del albun obtenido o la filtracion correspondiente
 
   Scenario: get de filtrado
-    When cuando el usuario quiere ver todos los albunes del Usuario  "2"
-    Then el usuario deberá ver una lista con todos los titulos y los id del usuario
+    When cuando el usuario haga una soicitus erronea
+    Then el usuario deberá ver un mensaje de error

@@ -1,7 +1,7 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features.Placeholder/albunColors.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features.Placeholder/albun.feature");
 formatter.feature({
-  "name": "Catalogo de Colores",
-  "description": "  Como un usuario que necesita que desea comprar una pintura\n  nececita obtener la lista de colores\n  para poder visualizar correctamente y comprar alguno de ellos",
+  "name": "Albun de fotos",
+  "description": "  Como un usuario que visita un sitio de albuns\n  nececito ingresar entrar al las carpetas especificas\n  para poder visualizar correctamente la informacion de dichos albunes",
   "keyword": "Feature"
 });
 formatter.background({
@@ -10,11 +10,11 @@ formatter.background({
   "keyword": "Background"
 });
 formatter.step({
-  "name": "que el usuario tiene conexion  a un navegador",
+  "name": "el usuario está en la pagina y",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.que_el_usuario_tiene_conexion_a_un_navegador()"
+  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.elUsuarioEstáEnLaPaginaY()"
 });
 formatter.result({
   "status": "passed"
@@ -25,21 +25,21 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "cuando el usuario realiza correctamente la peticion del servicio",
+  "name": "cuando el usuario quiere ver especificamente el algun albun",
   "keyword": "When "
 });
 formatter.match({
-  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.cuando_el_usuario_realiza_correctamente_la_peticion_del_servicio()"
+  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.cuandoElUsuarioQuiereVerEspecificamenteElAlgunAlbun()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "el usuario deberá observar obtener correctamente la lista con los colores disponibles",
+  "name": "el usuario deberá ver el titulo del albun obtenido o la filtracion correspondiente",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.el_usuario_deberá_observar_obtener_correctamente_la_lista_con_los_colores_disponibles()"
+  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.elUsuarioDeberáVerElTituloDelAlbunObtenidoOLaFiltracionCorrespondiente()"
 });
 formatter.result({
   "status": "passed"
@@ -50,36 +50,36 @@ formatter.background({
   "keyword": "Background"
 });
 formatter.step({
-  "name": "que el usuario tiene conexion  a un navegador",
+  "name": "el usuario está en la pagina y",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.que_el_usuario_tiene_conexion_a_un_navegador()"
+  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.elUsuarioEstáEnLaPaginaY()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "get fallido",
+  "name": "get de filtrado",
   "description": "",
   "keyword": "Scenario"
 });
 formatter.step({
-  "name": "cuando el usuario realice mal la peticion",
+  "name": "cuando el usuario haga una soicitus erronea",
   "keyword": "When "
 });
 formatter.match({
-  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.cuando_el_usuario_realice_mal_la_peticion()"
+  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.cuandoElUsuarioHagaUnaSoicitusErronea()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "el servicio debew retornar un mensaje de error 404Not Found",
+  "name": "el usuario deberá ver un mensaje de error",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.el_servicio_debew_retornar_un_mensaje_de_error_404Not_Found()"
+  "location": "co.com.sofka.stepdefinition.Placeholder.albuns.AlbunsStepDefinition1.elUsuarioDeberáVerUnMensajeDeError()"
 });
 formatter.result({
   "status": "passed"
